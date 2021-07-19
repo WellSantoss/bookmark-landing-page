@@ -1,4 +1,405 @@
 @import "reset";
 @import "var";
 
+body,
+input,
+button {
+  font-size: 1.125rem;
+  font-family: "Rubik", sans-serif;
+  color: $grayish-blue;
+}
+
+p {
+  line-height: 1.8rem;
+}
+
+h2 {
+  @include t-h2;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+h3 {
+  @include t-h3;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px 0;
+
+  ul {
+    display: flex;
+    align-items: center;
+
+    a {
+      color: $grayish-blue;
+      padding: 10px;
+      margin-left: 20px;
+      text-transform: uppercase;
+      font-size: 0.875rem;
+      letter-spacing: 2px;
+      font-weight: 500;
+      transition: color 0.3s;
+      &:hover {
+        color: $soft-red;
+      }
+
+      &.btn {
+        padding: 12px 32px;
+        border-radius: 8px;
+        background-color: $soft-red;
+        color: #fff;
+        box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.25);
+        transition: color 0.3s, background 0.3s, box-shadow 0.3s;
+        &:hover {
+          color: $soft-red;
+          background: transparent;
+          box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.25), 0px 0px 0px 2px $soft-red;
+        }
+      }
+    }
+  }
+}
+
+#hero {
+  background: url("../images/bg-r.svg") no-repeat right bottom;
+  padding: 50px 0 30px 0;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  .content {
+    max-width: 500px;
+    padding-bottom: 100px;
+
+    h1 {
+      @include t-h1;
+      margin-bottom: 30px;
+    }
+    p {
+      margin-bottom: 30px;
+    }
+    a {
+      @include btn;
+      background: $soft-blue;
+      color: #fff;
+      transition: color 0.3s, background 0.3s, box-shadow 0.3s;
+      &:hover {
+        background: transparent;
+        color: $soft-blue;
+        box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.25), 0px 0px 0px 2px $soft-blue;
+      }
+      & + a {
+        background: #fff;
+        color: $grayish-dark-blue;
+        margin-left: 10px;
+        transition: color 0.3s, background 0.3s, box-shadow 0.3s;
+        &:hover {
+          color: $grayish-dark-blue;
+          box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.25),
+            0px 0px 0px 2px $grayish-dark-blue;
+        }
+      }
+    }
+  }
+
+  .img {
+    margin-right: -120px;
+  }
+}
+
+#features {
+  background: url("../images/bg-l.svg") no-repeat left bottom;
+  padding: 100px 0;
+
+  .top {
+    text-align: center;
+    max-width: 550px;
+    margin: 0 auto;
+    p {
+      margin-bottom: 50px;
+    }
+  }
+
+  .content {
+    ul {
+      display: flex;
+      justify-content: space-between;
+      margin: 0 auto 80px;
+      max-width: 750px;
+      padding-bottom: 3px;
+      box-shadow: 0px 1px 0px $grayish-light-blue;
+      a {
+        color: $grayish-blue;
+        padding: 20px 50px;
+        font-weight: 500;
+        transition: color 0.3s;
+        &.active {
+          color: $grayish-dark-blue;
+          box-shadow: 0px 4px 0px $soft-red;
+        }
+        &:hover {
+          color: $soft-red;
+        }
+      }
+    }
+  }
+
+  .card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    display: none;
+    &.active {
+      display: flex;
+    }
+    .info {
+      max-width: 450px;
+      h2 {
+        text-align: left;
+      }
+      p {
+        margin-bottom: 30px;
+      }
+      a {
+        @include btn;
+        background: $soft-blue;
+        color: #fff;
+        transition: color 0.3s, background 0.3s, box-shadow 0.3s;
+        &:hover {
+          background: transparent;
+          color: $soft-blue;
+          box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.25),
+            0px 0px 0px 2px $soft-blue;
+        }
+      }
+    }
+  }
+}
+
+#pricing {
+  padding-top: 150px;
+
+  & > p {
+    text-align: center;
+    margin: 0 auto;
+    max-width: 550px;
+    margin-bottom: 50px;
+  }
+
+  .cards {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .card {
+    flex: 1;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.25);
+    max-width: 280px;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    margin: 0 15px;
+    &:nth-child(2) {
+      margin-top: 50px;
+    }
+    &:nth-child(3) {
+      margin-top: 100px;
+    }
+
+    img {
+      margin: 20px auto 30px;
+    }
+
+    p {
+      font-size: 0.875rem;
+    }
+
+    span {
+      margin: 30px 0 20px -20px;
+      width: 280px;
+      display: block;
+      height: 5px;
+      background: url("../images/bg-dots.svg");
+    }
+
+    a {
+      @include btn;
+      width: 100%;
+      background: $soft-blue;
+      color: #fff;
+      transition: color 0.3s, background 0.3s, box-shadow 0.3s;
+      &:hover {
+        background: transparent;
+        color: $soft-blue;
+        box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.25), 0px 0px 0px 2px $soft-blue;
+      }
+    }
+  }
+}
+
+#faq {
+  padding: 150px 0;
+  p {
+    max-width: 500px;
+    text-align: center;
+    margin: 0 auto 30px;
+  }
+  dl {
+    max-width: 530px;
+    margin: 0 auto;
+  }
+  dt {
+    color: $very-dark-blue;
+    cursor: pointer;
+    border-top: 1px solid $grayish-light-blue;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: color 0.3s;
+    &.active {
+      &::after {
+        background: url("../images/icon-arrow-red.svg");
+      }
+    }
+    &::after {
+      content: "";
+      display: inline-block;
+      background: url("../images/icon-arrow.svg");
+      width: 18px;
+      height: 12px;
+    }
+    &:nth-child(7) {
+      border-bottom: 1px solid $grayish-light-blue;
+    }
+    &:hover {
+      color: $soft-red;
+    }
+  }
+  dd {
+    display: none;
+    font-size: 1rem;
+    line-height: 1.8rem;
+    margin: 10px 0 20px 0;
+    color: $grayish-dark-blue;
+    &.active {
+      display: block;
+    }
+  }
+  .link {
+    text-align: center;
+    margin-top: 50px;
+  }
+  a {
+    @include btn;
+    background: $soft-blue;
+    color: #fff;
+    transition: color 0.3s, background 0.3s, box-shadow 0.3s;
+    &:hover {
+      background: transparent;
+      color: $soft-blue;
+      box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.25), 0px 0px 0px 2px $soft-blue;
+    }
+  }
+}
+
+#contact {
+  background: $soft-blue;
+  padding: 60px 0;
+  text-align: center;
+  .container {
+    max-width: 450px;
+  }
+  p {
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 0.875rem;
+    margin-bottom: 30px;
+  }
+  h2 {
+    color: #fff;
+  }
+  form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    input {
+      flex: 1;
+      font-size: 0.875rem;
+      max-width: 100%;
+      margin-right: 20px;
+      border-radius: 8px;
+      border: none;
+      padding: 15px;
+      outline: none;
+      &:focus {
+        box-shadow: 0px 0px 0px 2px $soft-red;
+      }
+    }
+    button {
+      @include btn;
+      border: none;
+      cursor: pointer;
+      background-color: $soft-red;
+      color: #fff;
+      box-shadow: none;
+      transition: color 0.3s, background 0.3s, box-shadow 0.3s;
+      &:hover {
+        color: $soft-red;
+        background: #fff;
+        box-shadow: 0px 0px 0px 2px $soft-red;
+      }
+    }
+  }
+}
+
+footer {
+  background: $very-dark-blue;
+  padding: 20px;
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .menu ul {
+    display: flex;
+    align-items: center;
+    & li:first-child a {
+      padding: 0;
+    }
+    a {
+      color: $grayish-light-blue;
+      padding: 10px;
+      margin-right: 40px;
+      text-transform: uppercase;
+      font-size: 0.875rem;
+      letter-spacing: 2px;
+      transition: color 0.3s;
+      &:hover {
+        color: $soft-red;
+      }
+    }
+  }
+  .sociais ul {
+    display: flex;
+    align-items: center;
+    a {
+      margin-left: 40px;
+    }
+  }
+}
+
 @import "responsive";

@@ -1,0 +1,37 @@
+// Colors -------------------------------
+$soft-blue: hsl(231, 69%, 60%);
+$soft-red: hsl(0, 94%, 66%);
+$grayish-light-blue: hsl(229, 8%, 90%);
+$grayish-blue: hsl(229, 8%, 60%);
+$grayish-dark-blue: hsl(229, 8%, 40%);
+$very-dark-blue: hsl(229, 31%, 21%);
+
+// Mixins -------------------------------
+// Texts
+@mixin t-h1 {
+  font-size: 3rem;
+  color: $very-dark-blue;
+  font-weight: 500;
+}
+
+@mixin t-h2 {
+  font-size: 2rem;
+  color: $very-dark-blue;
+  font-weight: 500;
+}
+
+@mixin t-h3 {
+  font-size: 1.25rem;
+  color: $very-dark-blue;
+  font-weight: 500;
+}
+
+// Style
+@mixin btn {
+  display: inline-block;
+  padding: 15px 30px;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.25);
+}
