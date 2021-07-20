@@ -120,7 +120,7 @@ header {
 
 #features {
   background: url("../images/bg-l.svg") no-repeat left bottom;
-  padding: 100px 0;
+  margin: 100px 0;
 
   .top {
     text-align: center;
@@ -166,6 +166,7 @@ header {
     align-items: center;
     display: none;
     &.active {
+      animation: toRight 0.3s forwards;
       display: flex;
     }
     .info {
@@ -193,7 +194,7 @@ header {
 }
 
 #pricing {
-  padding-top: 150px;
+  margin-top: 150px;
 
   & > p {
     text-align: center;
@@ -255,7 +256,7 @@ header {
 }
 
 #faq {
-  padding: 150px 0;
+  margin: 150px auto;
   p {
     max-width: 500px;
     text-align: center;
@@ -301,6 +302,7 @@ header {
     color: $grayish-dark-blue;
     &.active {
       display: block;
+      animation: toBottom 0.3s forwards;
     }
   }
   .link {
@@ -405,6 +407,17 @@ footer {
       margin-left: 40px;
     }
   }
+}
+
+[data-anime="scroll"] {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: 0.5s;
+}
+
+[data-anime="scroll"].active {
+  opacity: 1;
+  transform: translateY(0px);
 }
 
 @import "responsive";

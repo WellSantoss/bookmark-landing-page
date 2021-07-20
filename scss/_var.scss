@@ -35,3 +35,37 @@ $very-dark-blue: hsl(229, 31%, 21%);
   font-weight: 500;
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.25);
 }
+
+// Anim
+@keyframes toRight {
+  from {
+    opacity: 0;
+    transform: translateX(-200px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+@keyframes toBottom {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+@keyframes toTop {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
