@@ -6,3 +6,5 @@ import smoothScroll from "./modules/smoothScroll.js";
 smoothScroll();
 import scrollAnim from "./modules/scrollAnim.js";
 scrollAnim();
+import menuMobile from "./modules/menuMobile.js";
+menuMobile();

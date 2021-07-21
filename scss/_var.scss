@@ -48,6 +48,17 @@ $very-dark-blue: hsl(229, 31%, 21%);
   }
 }
 
+@keyframes toLeft {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
 @keyframes toBottom {
   from {
     opacity: 0;
