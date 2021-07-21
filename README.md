@@ -9,8 +9,8 @@ Os usuários devem ser capazes de:
 - [x] Visualizar o layout ideal para o site, dependendo do tamanho da tela do dispositivo;
 - [x] Ver estados de foco para todos os elementos interativos na página;
 - [ ] Receber uma mensagem de erro quando o formulário do newsletter for enviado, se:
-  - [ ] O campo de entrada estiver vazio;
-  - [ ] O endereço de e-mail não estiver formatado corretamente.
+  - O campo de entrada estiver vazio;
+  - O endereço de e-mail não estiver formatado corretamente.
 
 ---
 
